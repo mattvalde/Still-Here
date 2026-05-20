@@ -431,7 +431,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 .home-section-header h1,
 .home-section-header h2 {
   color: #ffffff;
-  font-weight: 760;
+  font-weight: 560;
   line-height: 0.98;
   letter-spacing: -0.03em;
 }
@@ -572,7 +572,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   color: var(--accent);
   font-size: 1.18rem;
   line-height: 1.25;
-  font-weight: 750;
+  font-weight: 560;
 }
 
 .story-scroll-page {
@@ -589,7 +589,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   padding: 9vh 1.5rem 4rem;
   color: #ffffff;
   font-size: clamp(3.2rem, 9vw, 8rem);
-  font-weight: 760;
+  font-weight: 560;
   line-height: 0.94;
   letter-spacing: -0.03em;
 }
@@ -625,7 +625,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   color: var(--accent);
   font-size: clamp(1.45rem, 3vw, 2.35rem);
   line-height: 1.08;
-  font-weight: 740;
+  font-weight: 560;
   letter-spacing: -0.02em;
 }
 
