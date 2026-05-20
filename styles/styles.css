@@ -954,9 +954,9 @@ body.theme-dark .theme-switch__knob {
 
 :root {
   --page-bg: #000000;
-  --surface: rgba(0, 0, 0, 0.54);
-  --surface-soft: rgba(255, 255, 255, 0.08);
-  --surface-raised: rgba(0, 0, 0, 0.32);
+  --surface: rgba(0, 0, 0, 0.34);
+  --surface-soft: rgba(255, 255, 255, 0.06);
+  --surface-raised: rgba(0, 0, 0, 0.22);
   --text: #f5f5f5;
   --text-soft: #c9c9c9;
   --border: rgba(255, 255, 255, 0.28);
@@ -969,7 +969,7 @@ body.theme-dark .theme-switch__knob {
 }
 
 body::before {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.78)), var(--background-dark);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.56)), var(--background-dark);
   opacity: 1;
 }
 
@@ -992,7 +992,7 @@ body::after {
 .sidebar-nav a,
 .btn,
 .sidebar-toggle {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.08);
   color: #f4f4f4;
 }
 
@@ -1007,6 +1007,26 @@ body::after {
 
 .nav-link--active {
   color: #ffffff;
+}
+
+.col-header {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-card,
+.gallery-card,
+.resource-card,
+.content-section,
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.gallery-lightbox {
+  background: rgba(0, 0, 0, 0.56);
+}
+
+.gallery-lightbox__close {
+  background: rgba(0, 0, 0, 0.42);
 }
 
 body.landing-page {
