@@ -479,7 +479,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .content-section h2 {
-  color: var(--text);
+  color: var(--accent);
   font-size: 1.18rem;
   line-height: 1.25;
   font-weight: 750;
@@ -497,7 +497,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   max-width: 1040px;
   margin: 0 auto;
   padding: 9vh 1.5rem 4rem;
-  color: #ffffff;
+  color: var(--accent);
   font-size: clamp(3.2rem, 9vw, 8rem);
   font-weight: 760;
   line-height: 0.94;
@@ -532,7 +532,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .text-bubble h2 {
-  color: #ffffff;
+  color: var(--accent);
   font-size: clamp(1.45rem, 3vw, 2.35rem);
   line-height: 1.08;
   font-weight: 740;
@@ -961,8 +961,8 @@ body.theme-dark .theme-switch__knob {
   --text-soft: #c9c9c9;
   --border: rgba(255, 255, 255, 0.28);
   --border-soft: rgba(255, 255, 255, 0.14);
-  --accent: #ffffff;
-  --accent-hover: #d7d7d7;
+  --accent: #2f86f6;
+  --accent-hover: #8fc5ff;
   --background-light: url("../assets/images/background-dark.JPG");
   --background-dark: url("../assets/images/background-dark.JPG");
   --shadow: 0 14px 38px rgba(0, 0, 0, 0.42);
@@ -1010,6 +1010,7 @@ body::after {
 }
 
 .col-header {
+  color: var(--accent);
   background: rgba(0, 0, 0, 0.2);
 }
 
