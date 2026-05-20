@@ -9,12 +9,14 @@
 </head>
 <body>
 
-  <main class="main-content layout-two-col" id="mainContent">
+  <main class="main-content home-page" id="mainContent">
 
-    <!-- ── Column 1: Our Interview ── -->
-    <div class="col-panel" id="interviewCol">
-      <div class="col-header">Our Interview</div>
-      <div class="col-body">
+    <section class="home-section home-interview reveal-bubble" id="interviewCol">
+      <div class="home-section-header">
+        <h1>Our Interview</h1>
+        <a href="https://www.youtube.com/watch?v=XVWYuby_S_o&authuser=1" class="btn">Go to Full Interview</a>
+      </div>
+      <div class="video-rail" aria-label="Interview clips">
 
         <div class="video-card">
           <video controls><source src="assets/videos/clip1.m4v" type="video/mp4" /></video>
@@ -46,20 +48,17 @@
           <p class="quote-attr">— Speaker Name, Year</p></div>
         </div>
 
-        <div class="btn-row btn-row--center">
-          <a href="https://www.youtube.com/watch?v=XVWYuby_S_o&authuser=1" class="btn">Go to Full Interview</a>
-        </div>
-
       </div>
-    </div>
+    </section>
 
 
-    <!-- ── Column 2: Mission + Gallery stacked ── -->
-    <div class="col-stack">
+    <div class="home-grid">
 
-      <div class="col-panel" id="missionPanel">
-        <div class="col-header">Mission</div>
-        <div class="col-body">
+      <section class="home-section reveal-bubble" id="missionPanel">
+        <div class="home-section-header">
+          <h2>Mission</h2>
+        </div>
+        <div class="home-section-body">
           <p class="body-text">
             Welcome to the Bearing Witness website. This website was created by 6 students from Brooklyn South
             to archive our experience in the Names, Not Numbers program of Holocaust education and rememberance
@@ -82,11 +81,13 @@
             <a href="https://www.mybrooklynstudionyc.com/" class="btn">Brooklyn Studio</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="col-panel" id="galleryPanel">
-        <div class="col-header">Gallery</div>
-        <div class="col-body">
+      <section class="home-section reveal-bubble" id="galleryPanel">
+        <div class="home-section-header">
+          <h2>Gallery</h2>
+        </div>
+        <div class="home-section-body">
           <div class="gallery-grid">
             <div class="gallery-item"><img src="assets/gallery/photos/8AAFABAA-D6A9-40FB-A045-15FE549875BC.JPG" alt="Photo 1" /></div>
             <div class="gallery-item"><img src="assets/gallery/photos/7867DA55-1FC8-45AB-B0AC-68AC60E2A692.JPG" alt="Photo 2" /></div>
@@ -97,12 +98,13 @@
             <a href="gallery.html" class="btn">View Full Gallery</a>
           </div>
         </div>
-      </div>
+      </section>
 
     </div>
 
   </main>
 
   <script src="scripts/sidebar.js"></script>
+  <script src="scripts/scroll-reveal.js"></script>
 </body>
 </html>
