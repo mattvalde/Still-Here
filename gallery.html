@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Name — Bearing Witness</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <main class="main-content gallery-page" id="mainContent">
+    <section class="col-panel gallery-shell">
+      <div class="col-header gallery-toolbar">
+        <span>Image Gallery</span>
+        <span class="gallery-status" id="galleryStatus">0 / 0</span>
+      </div>
+      <div class="col-body gallery-scroll">
+        <div class="gallery-grid-large" id="galleryGrid"></div>
+        <div class="gallery-sentinel" id="gallerySentinel"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/sidebar.js"></script>
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="gallery-lightbox__close" id="galleryLightboxClose" type="button" aria-label="Close">&times;</button>
+    <img id="galleryLightboxImage" alt="" />
+    <div class="gallery-lightbox__caption" id="galleryLightboxCaption"></div>
+  </div>
+  <script src="scripts/gallery.js"></script>
+</body>
+</html>
