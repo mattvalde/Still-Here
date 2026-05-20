@@ -489,7 +489,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   max-width: 1040px;
   margin: 0 auto;
   padding: 9vh 1.5rem 4rem;
-  color: var(--accent);
+  color: #ffffff;
   font-size: clamp(3.2rem, 9vw, 8rem);
   font-weight: 760;
   line-height: 0.94;
