@@ -418,11 +418,6 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   padding: clamp(1rem, 2vw, 1.45rem);
 }
 
-.home-interview {
-  margin: 0 auto 1rem;
-  width: min(100%, 1280px);
-}
-
 .home-section-header {
   display: flex;
   justify-content: space-between;
@@ -462,86 +457,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   align-items: stretch;
 }
 
-.video-rail {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(300px, 38%);
-  gap: 1rem;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: x mandatory;
-  padding: 0.1rem 0 0.6rem;
-}
-
-.video-rail::-webkit-scrollbar {
-  height: 6px;
-}
-
-.video-rail::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.video-rail::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
-  border-radius: 999px;
-}
-
-.video-rail .video-card {
-  scroll-snap-align: start;
-  min-width: 0;
-}
-
-.video-rail .video-card video {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-
-/* ── 9. VIDEO CARD ──────────────────────────────────────── */
-
-.video-card {
-  background: var(--surface-raised);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 0.7rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex-shrink: 0;
-  transition: background-color 220ms ease, border-color 220ms ease;
-}
-
-.video-card video {
-  width: 100%;
-  display: block;
-  background: #000000;
-}
-
-
-/* ── 10. QUOTE SECTION ──────────────────────────────────── */
-
-.quote-section { display: flex; flex-direction: column; gap: 0.25rem; }
-
-.quote-text {
-  font-family: inherit;
-  font-weight: normal;
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--text);
-  line-height: 1.55;
-}
-
-.quote-attr {
-  font-family: inherit;
-  font-weight: 650;
-  font-size: 0.75rem;
-  color: var(--text-soft);
-}
-
-
-/* ── 11. BODY TEXT ──────────────────────────────────────── */
+/* ── 9. BODY TEXT ──────────────────────────────────────── */
 
 .body-text {
   font-family: inherit;
@@ -1165,10 +1081,6 @@ body.theme-dark .theme-switch__knob {
     grid-template-columns: 1fr;
   }
 
-  .video-rail {
-    grid-auto-columns: minmax(260px, 84%);
-  }
-
   body.sidebar-collapsed .main-content {
     padding-top: 3.4rem;
   }
@@ -1263,7 +1175,6 @@ body::after {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.video-card,
 .gallery-card,
 .resource-card,
 .content-section,
@@ -1321,40 +1232,6 @@ body.landing-page::before {
   filter: drop-shadow(0 18px 42px rgba(0, 0, 0, 0.65));
 }
 
-.landing-quotes {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  opacity: 0.62;
-  mask-image: linear-gradient(transparent, #000 16%, #000 84%, transparent);
-}
-
-.quote-scroll {
-  width: min(88vw, 960px);
-  display: flex;
-  flex-direction: column;
-  animation: quoteDrift 54s linear infinite;
-}
-
-.quote-set {
-  display: flex;
-  flex-direction: column;
-  gap: 3.1rem;
-  padding: 3.1rem 0;
-}
-
-.quote-scroll p {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(1.15rem, 2.2vw, 2.1rem);
-  font-weight: 500;
-  line-height: 1.35;
-  text-align: center;
-  letter-spacing: 0;
-}
-
 .landing-enter {
   position: fixed;
   left: 50%;
@@ -1375,11 +1252,6 @@ body.landing-page::before {
 .landing-enter:hover {
   color: #000000;
   background: rgba(255, 255, 255, 0.86);
-}
-
-@keyframes quoteDrift {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
 }
 
 @media (max-width: 760px) {
@@ -1462,12 +1334,4 @@ body.landing-page::before {
     width: min(78vw, 420px);
   }
 
-  .quote-set {
-    gap: 2.4rem;
-    padding: 2.4rem 0;
-  }
-
-  .quote-scroll p {
-    font-size: clamp(1rem, 5vw, 1.55rem);
-  }
 }
