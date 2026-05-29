@@ -6,29 +6,43 @@
   const lightboxImage = document.getElementById('galleryLightboxImage');
   const lightboxCaption = document.getElementById('galleryLightboxCaption');
   const lightboxClose = document.getElementById('galleryLightboxClose');
+  const filterButtons = Array.from(document.querySelectorAll('[data-gallery-place]'));
 
   if (!grid || !status || !sentinel || !lightbox || !lightboxImage || !lightboxClose) {
     return;
   }
 
   const batchSize = 72;
+  const places = ['majdanek', 'belzec', 'auschwitz'];
+  const placeLabels = {
+    majdanek: 'Majdanek',
+    belzec: 'Belzec',
+    auschwitz: 'Auschwitz',
+  };
   let photos = [];
+  let visiblePhotos = [];
   let rendered = 0;
+  let activePlace = 'majdanek';
 
   function normalizePhoto(photo, index) {
+    const fallbackPlace = places[index % places.length];
+
     if (typeof photo === 'string') {
-      return { src: photo, title: `Photo ${index + 1}` };
+      return { src: photo, title: `Photo ${index + 1}`, place: fallbackPlace };
     }
 
     return {
       src: photo.src,
       title: photo.title || `Photo ${index + 1}`,
+      place: places.includes(String(photo.place).toLowerCase())
+        ? String(photo.place).toLowerCase()
+        : fallbackPlace,
     };
   }
 
   function setStatus() {
-    status.textContent = photos.length
-      ? `${Math.min(rendered, photos.length)} / ${photos.length}`
+    status.textContent = visiblePhotos.length
+      ? `${placeLabels[activePlace]} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
       : '0 / 0';
   }
 
@@ -67,7 +81,7 @@
   }
 
   function renderNextBatch() {
-    const nextPhotos = photos.slice(rendered, rendered + batchSize);
+    const nextPhotos = visiblePhotos.slice(rendered, rendered + batchSize);
     const fragment = document.createDocumentFragment();
 
     nextPhotos.forEach((photo) => {
@@ -78,8 +92,35 @@
     rendered += nextPhotos.length;
     setStatus();
 
-    if (rendered >= photos.length && observer) {
+    if (rendered >= visiblePhotos.length && observer) {
       observer.disconnect();
+    }
+  }
+
+  function setActiveFilter(place) {
+    activePlace = place;
+    visiblePhotos = photos.filter((photo) => photo.place === activePlace);
+    rendered = 0;
+    grid.innerHTML = '';
+    grid.classList.toggle('gallery-grid-large--empty', !visiblePhotos.length);
+
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.galleryPlace === activePlace;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+
+    setStatus();
+
+    if (!visiblePhotos.length) {
+      return;
+    }
+
+    renderNextBatch();
+
+    if (observer) {
+      observer.disconnect();
+      observer.observe(sentinel);
     }
   }
 
@@ -95,18 +136,15 @@
     .then((response) => response.json())
     .then((data) => {
       photos = data.map(normalizePhoto).filter((photo) => photo.src);
-      setStatus();
 
       if (!photos.length) {
+        visiblePhotos = [];
+        setStatus();
         grid.classList.add('gallery-grid-large--empty');
         return;
       }
 
-      renderNextBatch();
-
-      if (observer) {
-        observer.observe(sentinel);
-      }
+      setActiveFilter(activePlace);
     })
     .catch(() => {
       status.textContent = '0 / 0';
@@ -118,6 +156,12 @@
     if (event.target === lightbox) {
       closeLightbox();
     }
+  });
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      setActiveFilter(button.dataset.galleryPlace);
+    });
   });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {

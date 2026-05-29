@@ -789,6 +789,35 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   font-size: 0.72rem;
 }
 
+.gallery-filter {
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  overflow-x: auto;
+}
+
+.gallery-filter__button {
+  min-height: 34px;
+  padding: 0.46rem 0.85rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 560;
+  white-space: nowrap;
+}
+
+.gallery-filter__button:hover,
+.gallery-filter__button.is-active {
+  color: #ffffff;
+  background: rgba(47, 134, 246, 0.28);
+  border-color: rgba(143, 197, 255, 0.5);
+}
+
 .gallery-scroll {
   display: block;
 }
