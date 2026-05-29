@@ -45,8 +45,7 @@
 
         <div class="sidebar-logo">
           <a href="index.html" aria-label="Home">
-            <img class="logo-img logo-img--light" src="assets/images/bearingwitness.png" alt="Logo" />
-            <img class="logo-img logo-img--dark" src="assets/images/bearingwitnesswhite.png" alt="Logo" />
+            <span class="logo-wordmark">Still Here</span>
           </a>
         </div>
 
