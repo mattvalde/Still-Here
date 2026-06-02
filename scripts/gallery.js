@@ -6,44 +6,58 @@
   const lightboxImage = document.getElementById('galleryLightboxImage');
   const lightboxCaption = document.getElementById('galleryLightboxCaption');
   const lightboxClose = document.getElementById('galleryLightboxClose');
-  const filterButtons = Array.from(document.querySelectorAll('[data-gallery-place]'));
+  const filterButtons = Array.from(document.querySelectorAll('[data-gallery-day]'));
 
   if (!grid || !status || !sentinel || !lightbox || !lightboxImage || !lightboxClose) {
     return;
   }
 
-  const batchSize = 72;
-  const places = ['majdanek', 'belzec', 'auschwitz'];
-  const placeLabels = {
-    majdanek: 'Majdanek',
-    belzec: 'Belzec',
-    auschwitz: 'Auschwitz',
+  const batchSize = 24;
+  const dayMeta = {
+    1: { label: 'Day 1', place: 'Majdanek' },
+    2: { label: 'Day 2', place: 'Majdanek' },
+    3: { label: 'Day 3', place: 'Majdanek' },
+    4: { label: 'Day 4', place: 'Belzec' },
+    5: { label: 'Day 5', place: 'Belzec' },
+    6: { label: 'Day 6', place: 'Auschwitz' },
+    7: { label: 'Day 7', place: 'Auschwitz' },
   };
+  const dayKeys = Object.keys(dayMeta);
   let photos = [];
   let visiblePhotos = [];
   let rendered = 0;
-  let activePlace = 'majdanek';
+  let activeDay = '1';
 
-  function normalizePhoto(photo, index) {
-    const fallbackPlace = places[index % places.length];
+  function normalizeDay(value) {
+    const day = String(value || '').replace(/^day\s*/i, '');
+    return dayMeta[day] ? day : null;
+  }
+
+  function fallbackDayForIndex(index, allPhotos) {
+    const total = Math.max(allPhotos.length, 1);
+    const dayIndex = Math.min(dayKeys.length - 1, Math.floor((index / total) * dayKeys.length));
+    return dayKeys[dayIndex];
+  }
+
+  function normalizePhoto(photo, index, allPhotos) {
+    const fallbackDay = fallbackDayForIndex(index, allPhotos);
 
     if (typeof photo === 'string') {
-      return { src: photo, title: `Photo ${index + 1}`, place: fallbackPlace };
+      return { src: photo, title: `Photo ${index + 1}`, day: fallbackDay };
     }
 
     return {
       src: photo.src,
       title: photo.title || `Photo ${index + 1}`,
-      place: places.includes(String(photo.place).toLowerCase())
-        ? String(photo.place).toLowerCase()
-        : fallbackPlace,
+      day: normalizeDay(photo.day) || fallbackDay,
     };
   }
 
   function setStatus() {
+    const meta = dayMeta[activeDay];
     status.textContent = visiblePhotos.length
-      ? `${placeLabels[activePlace]} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
-      : '0 / 0';
+      ? `${meta.label} · ${meta.place} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
+      : `${meta.label} · ${meta.place} · 0 / 0`;
   }
 
   function openLightbox(photo) {
@@ -97,18 +111,23 @@
     }
   }
 
-  function setActiveFilter(place) {
-    activePlace = place;
-    visiblePhotos = photos.filter((photo) => photo.place === activePlace);
+  function setActiveFilter(day) {
+    activeDay = dayMeta[day] ? day : '1';
+    visiblePhotos = photos.filter((photo) => photo.day === activeDay);
     rendered = 0;
     grid.innerHTML = '';
     grid.classList.toggle('gallery-grid-large--empty', !visiblePhotos.length);
 
     filterButtons.forEach((button) => {
-      const isActive = button.dataset.galleryPlace === activePlace;
+      const isActive = button.dataset.galleryDay === activeDay;
       button.classList.toggle('is-active', isActive);
       button.setAttribute('aria-pressed', String(isActive));
     });
+
+    const scrollArea = grid.closest('.gallery-scroll');
+    if (scrollArea) {
+      scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     setStatus();
 
@@ -144,7 +163,7 @@
         return;
       }
 
-      setActiveFilter(activePlace);
+      setActiveFilter(activeDay);
     })
     .catch(() => {
       status.textContent = '0 / 0';
@@ -160,7 +179,7 @@
 
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      setActiveFilter(button.dataset.galleryPlace);
+      setActiveFilter(button.dataset.galleryDay);
     });
   });
   document.addEventListener('keydown', (event) => {
