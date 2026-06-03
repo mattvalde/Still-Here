@@ -1314,6 +1314,43 @@ body.landing-page::before {
   filter: drop-shadow(0 18px 42px rgba(0, 0, 0, 0.65));
 }
 
+.landing-quotes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.66;
+  mask-image: linear-gradient(transparent, #000000 15%, #000000 85%, transparent);
+  -webkit-mask-image: linear-gradient(transparent, #000000 15%, #000000 85%, transparent);
+}
+
+.quote-scroll {
+  width: min(88vw, 980px);
+  display: flex;
+  flex-direction: column;
+  animation: quoteDrift 78s linear infinite;
+  will-change: transform;
+}
+
+.quote-set {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.quote-scroll p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1.05rem, 2vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
 .landing-enter {
   position: fixed;
   left: 50%;
@@ -1334,6 +1371,11 @@ body.landing-page::before {
 .landing-enter:hover {
   color: #000000;
   background: rgba(255, 255, 255, 0.86);
+}
+
+@keyframes quoteDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
 }
 
 @media (max-width: 760px) {
@@ -1420,4 +1462,20 @@ body.landing-page::before {
     font-size: clamp(3.4rem, 19vw, 6.8rem);
   }
 
+  .quote-set {
+    gap: 2.35rem;
+    padding: 2.35rem 0;
+  }
+
+  .quote-scroll p {
+    font-size: clamp(1rem, 4.8vw, 1.48rem);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-scroll {
+    animation: none;
+    transform: translateY(0);
+  }
 }
