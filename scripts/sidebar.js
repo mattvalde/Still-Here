@@ -6,7 +6,7 @@
 // ============================================================
 
 (function () {
-  const DARK_MODE_KEY = 'bearingWitnessDarkMode';
+  const DARK_MODE_KEY = 'stillHereDarkMode';
   const savedDarkMode = localStorage.getItem(DARK_MODE_KEY) === 'true';
 
   if (savedDarkMode) {
@@ -45,7 +45,7 @@
 
         <div class="sidebar-logo">
           <a href="index.html" aria-label="Home">
-            <span class="logo-wordmark">Still Here</span>
+            <img class="logo-img" src="assets/images/still-here-logo.png" alt="Still Here" />
           </a>
         </div>
 
