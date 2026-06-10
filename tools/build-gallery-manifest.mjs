@@ -16,7 +16,7 @@ function titleFromFilename(filename) {
 }
 
 function dayFromPath(file) {
-  const match = file.match(/(?:^|\/)day[-_\s]?0?([1-7])(?:\/|$)/i);
+  const match = file.match(/(?:^|\/)day[-_\s]?0?([1-8])(?:\/|$)/i);
   return match ? match[1] : null;
 }
 
@@ -63,7 +63,7 @@ const photos = files
   .map((file, index) => {
     const src = `assets/gallery/photos/${file}`;
     const saved = captions[src] || captions[file] || {};
-    const day = saved.day || dayFromPath(file) || String(Math.min(7, Math.floor((index / Math.max(files.length, 1)) * 7) + 1));
+    const day = saved.day || dayFromPath(file) || String(Math.min(8, Math.floor((index / Math.max(files.length, 1)) * 8) + 1));
     const title = saved.title || titleFromFilename(file);
     const caption = saved.caption || '';
 

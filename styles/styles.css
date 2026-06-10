@@ -861,7 +861,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .gallery-grid-large--empty::before {
-  content: "Add photos to assets/gallery/photos/day-1 through day-7, then run: node tools/build-gallery-manifest.mjs";
+  content: "Add photos to assets/gallery/photos/Day1 through Day8, then run: node tools/build-gallery-manifest.mjs";
   display: block;
   width: min(100%, 620px);
   padding: 1rem 1.15rem;

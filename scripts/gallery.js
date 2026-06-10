@@ -22,6 +22,7 @@
     5: { label: 'Day 5' },
     6: { label: 'Day 6' },
     7: { label: 'Day 7' },
+    8: { label: 'Day 8' },
   };
   const dayKeys = Object.keys(dayMeta);
   let photos = [];

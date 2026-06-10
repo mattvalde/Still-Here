@@ -8,6 +8,7 @@ assets/gallery/photos/Day4/
 assets/gallery/photos/Day5/
 assets/gallery/photos/Day6/
 assets/gallery/photos/Day7/
+assets/gallery/photos/Day8/
 ```
 
 Then run this from the project folder:
