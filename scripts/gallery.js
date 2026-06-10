@@ -13,7 +13,7 @@
     return;
   }
 
-  const batchSize = 24;
+  const batchSize = 12;
   const dayMeta = {
     1: { label: 'Day 1' },
     2: { label: 'Day 2' },
@@ -40,6 +40,13 @@
     const total = Math.max(allPhotos.length, 1);
     const dayIndex = Math.min(dayKeys.length - 1, Math.floor((index / total) * dayKeys.length));
     return dayKeys[dayIndex];
+  }
+
+  function dayFromLocation() {
+    const params = new URLSearchParams(window.location.search);
+    const queryDay = normalizeDay(params.get('day'));
+    const hashDay = normalizeDay(window.location.hash.replace(/^#/, ''));
+    return queryDay || hashDay;
   }
 
   function normalizePhoto(photo, index, allPhotos) {
@@ -212,6 +219,7 @@
         return;
       }
 
+      activeDay = dayFromLocation() || dayKeys.find((day) => photos.some((photo) => photo.day === day)) || activeDay;
       setActiveFilter(activeDay);
     })
     .catch(() => {
