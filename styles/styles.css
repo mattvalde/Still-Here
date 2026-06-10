@@ -802,8 +802,8 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .gallery-filter__button {
-  min-width: 118px;
-  min-height: 52px;
+  min-width: 92px;
+  min-height: 46px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -861,7 +861,7 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
 }
 
 .gallery-grid-large--empty::before {
-  content: "Add photos to assets/gallery/photos, then run: node tools/build-gallery-manifest.mjs";
+  content: "Add photos to assets/gallery/photos/day-1 through day-7, then run: node tools/build-gallery-manifest.mjs";
   display: block;
   width: min(100%, 620px);
   padding: 1rem 1.15rem;
@@ -908,23 +908,18 @@ body.sidebar-collapsed .main-content   { margin-left: 0; width: 100vw; }
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.42rem 0.5rem;
+  padding: 1.1rem 0.58rem 0.48rem;
   color: #ffffff;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
+  line-height: 1.25;
   text-align: left;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.82) 32%, rgba(0, 0, 0, 0.92));
-  transform: translateY(100%);
-  transition: transform 180ms ease;
+  transform: translateY(0);
 }
 
 .gallery-card:hover img {
   transform: scale(1.045);
   filter: saturate(1.12);
-}
-
-.gallery-card:hover span,
-.gallery-card:focus-visible span {
-  transform: translateY(0);
 }
 
 .gallery-sentinel {

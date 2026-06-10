@@ -14,13 +14,13 @@
 
   const batchSize = 24;
   const dayMeta = {
-    1: { label: 'Day 1', place: 'Majdanek' },
-    2: { label: 'Day 2', place: 'Majdanek' },
-    3: { label: 'Day 3', place: 'Majdanek' },
-    4: { label: 'Day 4', place: 'Belzec' },
-    5: { label: 'Day 5', place: 'Belzec' },
-    6: { label: 'Day 6', place: 'Auschwitz' },
-    7: { label: 'Day 7', place: 'Auschwitz' },
+    1: { label: 'Day 1' },
+    2: { label: 'Day 2' },
+    3: { label: 'Day 3' },
+    4: { label: 'Day 4' },
+    5: { label: 'Day 5' },
+    6: { label: 'Day 6' },
+    7: { label: 'Day 7' },
   };
   const dayKeys = Object.keys(dayMeta);
   let photos = [];
@@ -43,12 +43,15 @@
     const fallbackDay = fallbackDayForIndex(index, allPhotos);
 
     if (typeof photo === 'string') {
-      return { src: photo, title: `Photo ${index + 1}`, day: fallbackDay };
+      return { src: photo, title: `Photo ${index + 1}`, caption: '', day: fallbackDay };
     }
+
+    const title = photo.title || `Photo ${index + 1}`;
 
     return {
       src: photo.src,
-      title: photo.title || `Photo ${index + 1}`,
+      title,
+      caption: photo.caption || '',
       day: normalizeDay(photo.day) || fallbackDay,
     };
   }
@@ -56,14 +59,15 @@
   function setStatus() {
     const meta = dayMeta[activeDay];
     status.textContent = visiblePhotos.length
-      ? `${meta.label} · ${meta.place} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
-      : `${meta.label} · ${meta.place} · 0 / 0`;
+      ? `${meta.label} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
+      : `${meta.label} · 0 / 0`;
   }
 
   function openLightbox(photo) {
     lightboxImage.src = photo.src;
-    lightboxImage.alt = photo.title;
-    lightboxCaption.textContent = photo.title;
+    lightboxImage.alt = photo.caption || photo.title;
+    lightboxCaption.textContent = photo.caption || '';
+    lightboxCaption.hidden = !photo.caption;
     lightbox.classList.add('is-open');
     lightboxClose.focus();
   }
@@ -81,14 +85,16 @@
 
     const image = document.createElement('img');
     image.src = photo.src;
-    image.alt = photo.title;
+    image.alt = photo.caption || photo.title;
     image.loading = 'lazy';
     image.decoding = 'async';
 
-    const caption = document.createElement('span');
-    caption.textContent = photo.title;
-
-    button.append(image, caption);
+    button.append(image);
+    if (photo.caption) {
+      const caption = document.createElement('span');
+      caption.textContent = photo.caption;
+      button.append(caption);
+    }
     button.addEventListener('click', () => openLightbox(photo));
 
     return button;
