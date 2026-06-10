@@ -16,7 +16,7 @@ function titleFromFilename(filename) {
 }
 
 function dayFromPath(file) {
-  const match = file.match(/(?:^|\/)day[-_\s]?([1-7])(?:\/|$)/i);
+  const match = file.match(/(?:^|\/)day[-_\s]?0?([1-7])(?:\/|$)/i);
   return match ? match[1] : null;
 }
 
@@ -42,7 +42,6 @@ async function listImages(directory, prefix = '') {
     }
 
     const relativePath = path.posix.join(prefix, entry.name);
-    const absolutePath = new URL(entry.name, directory);
 
     if (entry.isDirectory()) {
       files.push(...await listImages(new URL(`${entry.name}/`, directory), relativePath));
