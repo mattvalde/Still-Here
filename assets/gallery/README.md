@@ -41,3 +41,23 @@ node tools/build-gallery-manifest.mjs
 ```
 
 The gallery loads images in batches so very large collections stay responsive.
+
+## Daily Reflections
+
+Daily reflections live in `assets/gallery/reflections.json`. Each day can have a title and multiple paragraphs.
+
+Example:
+
+```json
+{
+  "1": {
+    "title": "Day 1 Reflection",
+    "paragraphs": [
+      "First paragraph of the reflection.",
+      "Second paragraph of the reflection."
+    ]
+  }
+}
+```
+
+The reflection appears at the bottom of that day in the gallery.

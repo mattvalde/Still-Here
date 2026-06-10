@@ -2,13 +2,14 @@
   const grid = document.getElementById('galleryGrid');
   const status = document.getElementById('galleryStatus');
   const sentinel = document.getElementById('gallerySentinel');
+  const reflection = document.getElementById('galleryReflection');
   const lightbox = document.getElementById('galleryLightbox');
   const lightboxImage = document.getElementById('galleryLightboxImage');
   const lightboxCaption = document.getElementById('galleryLightboxCaption');
   const lightboxClose = document.getElementById('galleryLightboxClose');
   const filterButtons = Array.from(document.querySelectorAll('[data-gallery-day]'));
 
-  if (!grid || !status || !sentinel || !lightbox || !lightboxImage || !lightboxClose) {
+  if (!grid || !status || !sentinel || !reflection || !lightbox || !lightboxImage || !lightboxClose) {
     return;
   }
 
@@ -24,6 +25,7 @@
   };
   const dayKeys = Object.keys(dayMeta);
   let photos = [];
+  let reflections = {};
   let visiblePhotos = [];
   let rendered = 0;
   let activeDay = '1';
@@ -61,6 +63,39 @@
     status.textContent = visiblePhotos.length
       ? `${meta.label} · ${Math.min(rendered, visiblePhotos.length)} / ${visiblePhotos.length}`
       : `${meta.label} · 0 / 0`;
+  }
+
+  function normalizeParagraphs(value) {
+    if (Array.isArray(value)) {
+      return value.map((paragraph) => String(paragraph).trim()).filter(Boolean);
+    }
+
+    return String(value || '')
+      .split(/\n{2,}/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+  }
+
+  function renderReflection() {
+    const entry = reflections[activeDay] || {};
+    const paragraphs = normalizeParagraphs(entry.paragraphs || entry.text);
+
+    reflection.innerHTML = '';
+    reflection.hidden = !paragraphs.length;
+
+    if (!paragraphs.length) {
+      return;
+    }
+
+    const heading = document.createElement('h2');
+    heading.textContent = entry.title || `${dayMeta[activeDay].label} Reflection`;
+    reflection.append(heading);
+
+    paragraphs.forEach((paragraph) => {
+      const text = document.createElement('p');
+      text.textContent = paragraph;
+      reflection.append(text);
+    });
   }
 
   function openLightbox(photo) {
@@ -123,6 +158,7 @@
     rendered = 0;
     grid.innerHTML = '';
     grid.classList.toggle('gallery-grid-large--empty', !visiblePhotos.length);
+    renderReflection();
 
     filterButtons.forEach((button) => {
       const isActive = button.dataset.galleryDay === activeDay;
@@ -157,14 +193,20 @@
       }, { rootMargin: '900px 0px' })
     : null;
 
-  fetch('assets/gallery/photos.json')
-    .then((response) => response.json())
-    .then((data) => {
+  Promise.all([
+    fetch('assets/gallery/photos.json').then((response) => response.json()),
+    fetch('assets/gallery/reflections.json')
+      .then((response) => (response.ok ? response.json() : {}))
+      .catch(() => ({})),
+  ])
+    .then(([data, reflectionData]) => {
+      reflections = reflectionData || {};
       photos = data.map(normalizePhoto).filter((photo) => photo.src);
 
       if (!photos.length) {
         visiblePhotos = [];
         setStatus();
+        renderReflection();
         grid.classList.add('gallery-grid-large--empty');
         return;
       }
