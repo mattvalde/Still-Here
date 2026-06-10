@@ -1,127 +1,215 @@
 {
+  "assets/gallery/photos/Day1/day1-01.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-02.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-03.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-04.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-05.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-06.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-07.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-08.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-09.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-10.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-11.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-12.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-13.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-14.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-16.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-17.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-18.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-19.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-20.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-21.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-22.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day1/day1-23.jpg": {
+    "day": "1",
+    "caption": ""
+  },
+  "assets/gallery/photos/Day2/day2-05.jpg": {
+    "day": "2",
+    "caption": "Pic 5: The Palace of Culture and Science, built after World War II, stands near the former Warsaw Ghetto and symbolizes the city's reconstruction following the devastation of the Holocaust."
+  },
+  "assets/gallery/photos/Day2/day2-06.jpg": {
+    "day": "2",
+    "caption": "Pic 6: “Ulica Raoula Wallenberga” means “Raoul Wallenberg Street.” It commemorates Raoul Wallenberg, the Swedish diplomat who saved tens of thousands of Hungarian Jews during the Holocaust by issuing protective passports and establishing safe houses in Budapest."
+  },
+  "assets/gallery/photos/Day2/day2-13.jpg": {
+    "day": "2",
+    "caption": "Pic 13: The Monument to the Ghetto Heroes commemorates the Jewish fighters and civilians of the Warsaw Ghetto and honors those who resisted Nazi persecution."
+  },
+  "assets/gallery/photos/Day2/day2-14.jpg": {
+    "day": "2",
+    "caption": "Pic 14: Built after World War II, the Palace of Culture and Science overlooks areas once devastated during the Holocaust and symbolizes Warsaw's postwar reconstruction."
+  },
+  "assets/gallery/photos/Day2/day2-15.jpg": {
+    "day": "2",
+    "caption": "Pic 15: Warsaw's modern skyline reflects the city's rebuilding after the destruction brought by World War II and the Holocaust."
+  },
+  "assets/gallery/photos/Day2/day2-16.jpg": {
+    "day": "2",
+    "caption": "Pic 16: This monument honors Janusz Korczak, the educator who chose to remain with the children of his orphanage and accompanied them from the Warsaw Ghetto to their deaths during the Holocaust."
+  },
+  "assets/gallery/photos/Day2/day2-17.jpg": {
+    "day": "2",
+    "caption": "Pic 17: Another look at the Monument to the Ghetto Heroes in Warsaw honors the Jewish fighters and victims of the Warsaw Ghetto and commemorates the 1943 Warsaw Ghetto Uprising."
+  },
+  "assets/gallery/photos/Day2/day2-18.jpg": {
+    "day": "2",
+    "caption": "Pic 18: These steel structures mark the location of the wooden footbridge that connected the two sections of the Warsaw Ghetto, allowing victims to cross above Chłodna Street while remaining confined within the ghetto."
+  },
+  "assets/gallery/photos/Day2/day2-19.jpg": {
+    "day": "2",
+    "caption": "Pic 19: The night sky above the former Warsaw Ghetto serves as a reminder of the importance of preserving the memory of the Jewish community that once flourished in Warsaw."
+  },
+  "assets/gallery/photos/Day2/day2-20.jpg": {
+    "day": "2",
+    "caption": "Pic 20: The Westin Warsaw hotel stands in the heart of a city rebuilt after the devastation of World War II and the Holocaust, reflecting Warsaw's transformation into a modern European capital."
+  },
   "assets/gallery/photos/Day3/day3-01.jpg": {
     "day": "3",
-    "caption": "Pic 3: Sculpture of a tortoise created by prisoner Albin Maria Boniecki"
+    "caption": "Pic 1: Entrance and general view of the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-02.jpg": {
     "day": "3",
-    "caption": "Pic 4: Helena Kurcyusz camp clothes: shoes, striped jacket, and a head scarf"
+    "caption": "Pic 2: Entrance sign to the Prisoners of Majdanek exhibition"
   },
   "assets/gallery/photos/Day3/day3-03.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 3: Sculpture of a tortoise created by prisoner Albin Maria Boniecki"
   },
   "assets/gallery/photos/Day3/day3-04.jpg": {
     "day": "3",
-    "caption": "Pic 16: The Column of the Three Eagles description"
+    "caption": "Pic 4: Camp clothing belonging to Helena Kurcyusz, including shoes, a striped jacket, and a headscarf"
   },
   "assets/gallery/photos/Day3/day3-05.jpg": {
     "day": "3",
-    "caption": "Pic 5: Photographs found on the grounds of the camp Pic 6: Art objects made by prisoners at Majdanek"
+    "caption": "Pic 5: Close-up view of the camp clothing belonging to Helena Kurcyusz"
   },
   "assets/gallery/photos/Day3/day3-06.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 6: Photographs recovered from the grounds of the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-07.jpg": {
     "day": "3",
-    "caption": "Pic 15: The Column of the Three Eagles: First monument to the victims of Majdanek"
+    "caption": "Pic 7: Art objects created by prisoners at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-08.jpg": {
     "day": "3",
-    "caption": "Pic 7: (zoomed in picture of pic 4)"
+    "caption": "Pic 8: Biography of Jerzy Pfeffer, a survivor of the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-09.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 9: Drawing of a carpenter created by Helena Kurcyusz"
   },
   "assets/gallery/photos/Day3/day3-10.jpg": {
     "day": "3",
-    "caption": "Pic 8: Biography of Jerzy Pfeffer: a survivor of the Majdanek concentration camp"
+    "caption": "Pic 10: Cross given to Bronisława Korzeniowska (née Milewska) by Amour Collin"
   },
   "assets/gallery/photos/Day3/day3-11.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 11: Shoes confiscated from prisoners upon their arrival at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-12.jpg": {
     "day": "3",
-    "caption": "Pic 9: A drawing of a carpenter made by Helena Kurcyusz"
+    "caption": "Pic 12: Overcrowded and unhygienic bunk beds in the prisoners’ barracks at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-13.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 13: Memorial exhibit at the Majdanek Concentration Camp museum featuring a fragment of a camp road constructed from stones taken from Jewish tombstones (matzevot)"
   },
   "assets/gallery/photos/Day3/day3-14.jpg": {
     "day": "3",
-    "caption": "Pic 2: The entry sign of the museum Pic 10"
+    "caption": "Pic 14: Watchtower at the Majdanek Concentration Camp used by Nazi officials to observe inmates"
   },
   "assets/gallery/photos/Day3/day3-15.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 15: The Column of the Three Eagles, the first monument to the victims of the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-16.jpg": {
     "day": "3",
-    "caption": "Pic 11- The shoes that were taken from Majadanek inmates when they first arrived at the camp"
+    "caption": "Pic 16: Description of the Column of the Three Eagles monument at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-17.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 17: Side view of the camp grounds at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-18.jpg": {
     "day": "3",
-    "caption": "Pic 12: The cross given to Bronisława Korzeniowska née Milewska by Amour Collin"
+    "caption": "Pic 18: The Mausoleum at the Majdanek Concentration Camp, inscribed with “Los nasz dla was przestrogą” (“Our fate is a warning to you”)"
   },
   "assets/gallery/photos/Day3/day3-19.jpg": {
     "day": "3",
-    "caption": ""
+    "caption": "Pic 19: Side view of the Mausoleum"
   },
   "assets/gallery/photos/Day3/day3-20.jpg": {
     "day": "3",
-    "caption": "Pic 13- The cramped and unsanitary bunked beds where inmates had to sleep. Pic 14- A watchtower: where Nazi officials used to watch inmates"
+    "caption": "Pic 20: Crematorium at the Majdanek Concentration Camp"
   },
   "assets/gallery/photos/Day3/day3-21.jpg": {
     "day": "3",
-    "caption": ""
-  },
-  "assets/gallery/photos/Day3/day3-22.jpg": {
-    "day": "3",
-    "caption": "Pic 1: Entry to the Majdanek Concentration camp (view of the whole camp.)"
-  },
-  "assets/gallery/photos/Day3/day3-23.jpg": {
-    "day": "3",
-    "caption": ""
-  },
-  "assets/gallery/photos/Day3/day3-24.jpg": {
-    "day": "3",
-    "caption": "Pic 17: Side view of the field"
-  },
-  "assets/gallery/photos/Day3/day3-25.jpg": {
-    "day": "3",
-    "caption": ""
-  },
-  "assets/gallery/photos/Day3/day3-26.jpg": {
-    "day": "3",
-    "caption": "Pic 18: The Mausoleum inscribed in it “Los nasz dla was przestrogą”"
-  },
-  "assets/gallery/photos/Day3/day3-27.jpg": {
-    "day": "3",
-    "caption": "Pic 20: Majdanek Crematorium"
-  },
-  "assets/gallery/photos/Day3/day3-28.jpg": {
-    "day": "3",
-    "caption": ""
-  },
-  "assets/gallery/photos/Day3/day3-29.jpg": {
-    "day": "3",
-    "caption": "Pic 19: The Mausoleum- side view"
-  },
-  "assets/gallery/photos/Day3/day3-30.jpg": {
-    "day": "3",
-    "caption": "Pic 21"
-  },
-  "assets/gallery/photos/Day3/day3-31.jpg": {
-    "day": "3",
-    "caption": ""
+    "caption": "Pic 21: This memorial stone at the Majdanek Concentration Camp in Lublin commemorates the approximately 18,400 Jewish prisoners murdered on November 3, 1943, during Operation Harvest Festival (Erntefest), whose bodies were buried in trenches nearby, and serves today as a site of remembrance for the victims of the Holocaust."
   },
   "assets/gallery/photos/Day4/1.jpg": {
     "day": "4",
@@ -203,59 +291,119 @@
     "day": "4",
     "caption": "Pic 20: View of the sunset near the Zamość Fortress"
   },
-  "assets/gallery/photos/Day8/IMG_3563.JPG": {
+  "assets/gallery/photos/Day6/day6-01.jpg": {
+    "day": "6",
+    "caption": "Pic 1: Bird in the moat of Łańcut Castle"
+  },
+  "assets/gallery/photos/Day6/day6-02.jpg": {
+    "day": "6",
+    "caption": "Pic 2: Bird in the field surrounding Łańcut Castle"
+  },
+  "assets/gallery/photos/Day6/day6-03.jpg": {
+    "day": "6",
+    "caption": "Pic 3: Łańcut Castle side view"
+  },
+  "assets/gallery/photos/Day6/day6-04.jpg": {
+    "day": "6",
+    "caption": "Pic 4: Łańcut Castle front view"
+  },
+  "assets/gallery/photos/Day6/day6-05.jpg": {
+    "day": "6",
+    "caption": "Pic 5: A 3-branched menorah in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-06.jpg": {
+    "day": "6",
+    "caption": "Pic 6: A 4-branched menorah in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-07.jpg": {
+    "day": "6",
+    "caption": "Pic 7: Torn shreds of Jewish writing in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-08.jpg": {
+    "day": "6",
+    "caption": "Pic 8: Embroidered banner with Hebrew writing in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-09.jpg": {
+    "day": "6",
+    "caption": "Pic 9: Lantern in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-10.jpg": {
+    "day": "6",
+    "caption": "Pic 10: Another view of 4-branched menorah in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-11.jpg": {
+    "day": "6",
+    "caption": "Pic 11: View of the interior of Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-12.jpg": {
+    "day": "6",
+    "caption": "Pic 12: View of the center structure of the Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-13.jpg": {
+    "day": "6",
+    "caption": "Pic 13: View of the center structure and centerpiece of the Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-14.jpg": {
+    "day": "6",
+    "caption": "Pic 14: View of a ceiling painting in Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day6/day6-15.jpg": {
+    "day": "6",
+    "caption": "Pic 15: Tablet with Hebrew writing found in the Łańcut Synagogue"
+  },
+  "assets/gallery/photos/Day8/day8-3563.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_3565.JPG": {
+  "assets/gallery/photos/Day8/day8-3565.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_3567.JPG": {
+  "assets/gallery/photos/Day8/day8-3567.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_3570.JPG": {
+  "assets/gallery/photos/Day8/day8-3570.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_3572.JPG": {
+  "assets/gallery/photos/Day8/day8-3572.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4476.JPG": {
+  "assets/gallery/photos/Day8/day8-4476.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4477.JPG": {
+  "assets/gallery/photos/Day8/day8-4477.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4478.JPG": {
+  "assets/gallery/photos/Day8/day8-4478.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4479.JPG": {
+  "assets/gallery/photos/Day8/day8-4479.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4480.JPG": {
+  "assets/gallery/photos/Day8/day8-4480.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4482.JPG": {
+  "assets/gallery/photos/Day8/day8-4482.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4485.JPG": {
+  "assets/gallery/photos/Day8/day8-4485.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4487.JPG": {
+  "assets/gallery/photos/Day8/day8-4487.jpg": {
     "day": "8",
     "caption": ""
   },
-  "assets/gallery/photos/Day8/IMG_4488.JPG": {
+  "assets/gallery/photos/Day8/day8-4488.jpg": {
     "day": "8",
     "caption": ""
   }
